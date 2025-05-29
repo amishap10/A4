@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PersonTest {
 
 
-    //vaild personID
+    //Test Case 1: vaild personID
     @Test
     void validPerson() {
         Person person = new Person(
@@ -21,7 +21,7 @@ public class PersonTest {
         assertTrue(person.addPerson());
     }
 
-    //invalid birthdate format
+    //Test Case 2: invalid birthdate format
     @Test
     void invalidBirthday() {
         Person person = new Person(
@@ -34,7 +34,7 @@ public class PersonTest {
         assertFalse(person.addPerson());
     }
 
-    //invalid address state
+    //Test Case 3: invalid state
     @Test
     void invalidAddress() {
         Person person = new Person(
@@ -47,7 +47,7 @@ public class PersonTest {
         assertFalse(person.addPerson());
     }
 
-    //invalid address format
+    //Test Case 4: invalid address format
     @Test
     void invalidAddressFormat() {
         Person person = new Person(
@@ -60,7 +60,7 @@ public class PersonTest {
         assertFalse(person.addPerson());
     }
 
-    //invalid no special characters
+    //Test Case 5: invalid no special characters
     @Test
     void invalidNoSpecialChar() {
         Person person = new Person(
@@ -73,7 +73,7 @@ public class PersonTest {
         assertFalse(person.addPerson());
     }
 
-    // Test Case 1: Address change not allowed if under 18
+    // Test Case 6: Address change not allowed if under 18
     @Test
     public void updatePersonalDetails_testCase1() {
         Person child = new Person(
@@ -93,7 +93,11 @@ public class PersonTest {
         assertFalse(result);
     }
 
+<<<<<<< HEAD
     // Test Case 2: Only birthdate changes allowed when birthdate is changed
+=======
+    // Test Case 7: Only birthday changes — allowed
+>>>>>>> 5b2b1a3 (comments)
     @Test
     public void updatePersonalDetails_testCase2() {
         Person adult = new Person(
@@ -113,7 +117,7 @@ public class PersonTest {
         assertFalse(result);
     }
 
-    // Test Case 3: Birthday and name change — not allowed
+    // Test Case 8: Birthday and name change — not allowed
     @Test
     public void updatePersonalDetails_testCase3() {
         Person adult = new Person(
@@ -132,7 +136,7 @@ public class PersonTest {
         assertFalse(result);
     }
 
-    // Test Case 4: Birthday and address change — not allowed
+    // Test Case 9: Birthday and address change — not allowed
     @Test
     public void updatePersonalDetails_testCase4() {
         Person adult = new Person(
@@ -152,7 +156,7 @@ public class PersonTest {
         assertFalse(result);
     }
 
-    // Test Case 5: All changes valid if adult is with odd-digit ID
+    // Test Case 10: All changes valid if adult is with odd-digit ID
     @Test
     public void updatePersonalDetails_testCase5() {
         Person adult = new Person(
@@ -175,6 +179,7 @@ public class PersonTest {
 }
 class PersonDemeritPointsTest {
 
+    // Test Case 11:  validate suspension 
     @Test
     void testCase1_under21_validNoSuspend() {
         Person p = new Person();
@@ -186,6 +191,7 @@ class PersonDemeritPointsTest {
         assertFalse(p.isSuspended(), "Under-21 with only 3 points should not be suspended");
     }
 
+    // Test Case 12: suspend after threhold over 21
     @Test
     void testCase2_over21_flowNoSuspendThenSuspend() {
         Person p = new Person();
@@ -208,6 +214,7 @@ class PersonDemeritPointsTest {
         assertTrue(p.isSuspended(), "15 points > 12 → should now be suspended");
     }
 
+    // Test Case 13: invalid birthdate format
     @Test
     void testCase3_invalidDateFormat() {
         Person p = new Person();
@@ -218,6 +225,7 @@ class PersonDemeritPointsTest {
         assertEquals("Failed", result, "Invalid date format should fail");
     }
 
+    // Test Case 14: points out of range
     @Test
     void testCase4_pointsOutOfRange() {
         Person p = new Person();
@@ -232,6 +240,7 @@ class PersonDemeritPointsTest {
         );
     }
 
+    // Test Case 15: suspend after threshold under 21
     @Test
     void testCase5_under21_suspendAfterThreshold() {
         Person p = new Person();

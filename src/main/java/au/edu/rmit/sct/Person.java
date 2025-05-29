@@ -39,16 +39,20 @@ public class Person {
 
     public boolean addPerson() {
 
-        //condition 1 personID
+        // Condition 1 
+        // Checks if personID's length is exactly 10 characters long
         if (personID.length() == 10) {
             return false;
         }
         char firstChar = personID.charAt(0);
         char secondChar = personID.charAt(1);
 
+        // Checks if the first character of personID is a digit that is between 2 and 9
         if (!Character.isDigit(firstChar) || firstChar < '2' || firstChar > '9') {
             return false;
         }
+
+        // Checks if the second character of personID is a digit that is between 2 and 9
         if (!Character.isDigit(secondChar) || secondChar < '2' || secondChar > '9') {
             return false;
         }
@@ -56,33 +60,46 @@ public class Person {
         String specialChar = "!@#$%&*()-_+=|<>?{}[]~";
         int count = 0;
 
+        // The loop checks for any special characters between characters 3 and 8 of the personID
+        // For every special character found, the count is increased by 1
         for (int i = 2; i < 8; i++) {
             if (specialChar.contains(String.valueOf(personID.charAt(i)))) {
                 count++;
             }
         }
+        // If less than two special characters are found, then personID is invalid
         if (count < 2) {
             return false;
         }
+
+        // Checks if the last two character of personID are upper casese
         if (!Character.isUpperCase(personID.charAt(personID.length() -1)) || !Character.isUpperCase(personID.charAt(personID.length() -2))) {
             return false;
         }
 
-        //condition 2 address
+        // Condition 2 
+        // Checks if the address entered is in correct format: Street Number|Street|City|Victoria|Country
+        //  \\d = digit
+        // "+" = one or more digits
+        // "\\|" = the seperator
 
         String addressMatch = "\\d+\\|[^|]+\\|[^|]+\\|Victoria\\|[^|]+";
         if (!address.matches(addressMatch)) {
             return false;
         }
 
-        //condition 3 birth date
+        // Condition 3 
+        // Checks if the birth date entered is in correct format: DD-MM-YYYY
+        // "d{2}" = two digits and "d{4}"" = 4 digits
 
         String dateFormat = "\\d{2}-\\d{2}-\\d{4}";
         if (!birthdate.matches(dateFormat)) {
             return false;
         }
 
-        //TXT file
+        // If all the condition are met, the infromation is added to a TXT file
+        // Any case the conditions arent met, it returns false and closes the TXT file without updating anything
+
         try (FileWriter writer = new FileWriter("person.txt", true)) {
             writer.write(String.format( 
                 "%s,%s,%s,%s,%s%n",

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="PersonTest" time="0.032" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="PersonDemeritPointsTest" time="0.027" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -7,6 +7,7 @@
     <property name="java.vm.vendor" value="Homebrew"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Australia/Melbourne"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="java.vm.specification.version" value="23"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -58,14 +59,9 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="validPerson" classname="PersonTest" time="0.01"/>
-  <testcase name="invalidAddress" classname="PersonTest" time="0.001"/>
-  <testcase name="invalidAddressFormat" classname="PersonTest" time="0.001"/>
-  <testcase name="invalidBirthday" classname="PersonTest" time="0.0"/>
-  <testcase name="invalidNoSpecialChar" classname="PersonTest" time="0.0"/>
-  <testcase name="updatePersonalDetails_testCase1" classname="PersonTest" time="0.008"/>
-  <testcase name="updatePersonalDetails_testCase2" classname="PersonTest" time="0.001"/>
-  <testcase name="updatePersonalDetails_testCase3" classname="PersonTest" time="0.0"/>
-  <testcase name="updatePersonalDetails_testCase4" classname="PersonTest" time="0.001"/>
-  <testcase name="updatePersonalDetails_testCase5" classname="PersonTest" time="0.001"/>
+  <testcase name="testCase5_under21_suspendAfterThreshold" classname="PersonDemeritPointsTest" time="0.022"/>
+  <testcase name="testCase3_invalidDateFormat" classname="PersonDemeritPointsTest" time="0.001"/>
+  <testcase name="testCase1_under21_validNoSuspend" classname="PersonDemeritPointsTest" time="0.001"/>
+  <testcase name="testCase4_pointsOutOfRange" classname="PersonDemeritPointsTest" time="0.002"/>
+  <testcase name="testCase2_over21_flowNoSuspendThenSuspend" classname="PersonDemeritPointsTest" time="0.001"/>
 </testsuite>

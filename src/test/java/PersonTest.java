@@ -92,12 +92,9 @@ public class PersonTest {
             );
         assertFalse(result);
     }
-
-<<<<<<< HEAD
-    // Test Case 2: Only birthdate changes allowed when birthdate is changed
-=======
+    
     // Test Case 7: Only birthday changes — allowed
->>>>>>> 5b2b1a3 (comments)
+
     @Test
     public void updatePersonalDetails_testCase2() {
         Person adult = new Person(

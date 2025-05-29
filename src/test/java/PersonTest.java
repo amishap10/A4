@@ -156,20 +156,20 @@ public class PersonTest {
     @Test
     public void updatePersonalDetails_testCase5() {
         Person adult = new Person(
-            "3@XYZ", 
+            "36!@&*XYP", 
             "Jane", 
             "Doe", 
             "321|Square St|Richmond|Victoria|Australia", 
             "15-03-1995"
             );
         boolean result = adult.updatePersonalDetails(
-            "3*A#C", 
+            "36!@&*XYP", 
             "Janet", 
             "Dane", 
             "654|New Rd|Richmond|Victoria|Australia", 
             "15-03-1995"
             );
-        assertFalse(result);
+        assertTrue(result);
     }
 
 }

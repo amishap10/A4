@@ -76,14 +76,14 @@ public class PersonTest {
     // Test Case 1: Address change not allowed if under 18
     @Test
     public void updatePersonalDetails_testCase1() {
-        Person minor = new Person(
+        Person child = new Person(
             "1@ABC", 
             "Alice", 
             "Young", 
             "123|Circle St|Carlton|Victoria|Australia", 
             "10-05-2010"
             );
-        boolean result = minor.updatePersonalDetails(
+        boolean result = child.updatePersonalDetails(
             "1@ABC", 
             "Alice", 
             "Young", 

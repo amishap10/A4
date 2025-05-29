@@ -178,7 +178,7 @@ class PersonDemeritPointsTest {
     @Test
     void testCase1_under21_validNoSuspend() {
         Person p = new Person();
-        p.setPersonID("ID0000001");
+        p.setPersonID("ab#@aX1");
         p.setBirthdate("01-01-2005"); // age 18 in 2023
 
         String result = p.addDemeritPoints("01-06-2023", 3);
@@ -189,7 +189,7 @@ class PersonDemeritPointsTest {
     @Test
     void testCase2_over21_flowNoSuspendThenSuspend() {
         Person p = new Person();
-        p.setPersonID("ID0000002");
+        p.setPersonID("ab#@aX2");
         p.setBirthdate("01-01-1980"); // age 43 in 2023
 
         // 1) First offense: 5 points → total = 5 (<12), no suspension
@@ -211,7 +211,7 @@ class PersonDemeritPointsTest {
     @Test
     void testCase3_invalidDateFormat() {
         Person p = new Person();
-        p.setPersonID("ID0000003");
+        p.setPersonID("ab#@aX3");
         p.setBirthdate("01-01-2000"); // age 23 in 2023
 
         String result = p.addDemeritPoints("2023/11/15", 4);
@@ -221,7 +221,7 @@ class PersonDemeritPointsTest {
     @Test
     void testCase4_pointsOutOfRange() {
         Person p = new Person();
-        p.setPersonID("ID0000004");
+        p.setPersonID("ab#@aX4");
         p.setBirthdate("01-01-2000"); // age 23 in 2023
 
         String resultLow  = p.addDemeritPoints("01-12-2023", 0);
@@ -235,7 +235,7 @@ class PersonDemeritPointsTest {
     @Test
     void testCase5_under21_suspendAfterThreshold() {
         Person p = new Person();
-        p.setPersonID("ID0000005");
+        p.setPersonID("ab#@aX5");
         p.setBirthdate("01-01-2005"); // age 18 in 2023
 
         // First offense: 4 points → total = 4 (<6), no suspension

@@ -76,41 +76,100 @@ public class PersonTest {
     // Test Case 1: Address change not allowed if under 18
     @Test
     public void updatePersonalDetails_testCase1() {
-        Person minor = new Person("1@ABC", "Alice", "Young", "123|Circle St|Carlton|Victoria|Australia", "10-05-2010");
-        boolean result = minor.updatePersonalDetails("1@ABC", "Alice", "Young", "456|Tree Ave|Carlton|Victoria|Australia", "10-05-2010");
+        Person minor = new Person(
+            "1@ABC", 
+            "Alice", 
+            "Young", 
+            "123|Circle St|Carlton|Victoria|Australia", 
+            "10-05-2010"
+            );
+        boolean result = minor.updatePersonalDetails(
+            "1@ABC", 
+            "Alice", 
+            "Young", 
+            "456|Tree Ave|Carlton|Victoria|Australia", 
+            "10-05-2010"
+            );
         assertFalse(result);
     }
 
     // Test Case 2: Only birthday changes — allowed
     @Test
     public void updatePersonalDetails_testCase2() {
-        Person adult = new Person("1#XYZ", "Bob", "Smith", "456|Main St|Melbourne|Victoria|Australia", "01-01-2000");
-        boolean result = adult.updatePersonalDetails("1#XYZ", "Bob", "Smith", "789|Main St|Melbourne|Victoria|Australia", "01-01-1999");
+        Person adult = new Person(
+            "1#XYZ", 
+            "Bob", 
+            "Smith", 
+            "456|Main St|Melbourne|Victoria|Australia", 
+            "01-01-2000"
+            );
+        boolean result = adult.updatePersonalDetails(
+            "1#XYZ", 
+            "Bob", 
+            "Smith", 
+            "789|Main St|Melbourne|Victoria|Australia", 
+            "01-01-1999"
+            );
         assertFalse(result);
     }
 
     // Test Case 3: Birthday and name change — not allowed
     @Test
     public void updatePersonalDetails_testCase3() {
-        Person adult = new Person("1#XYZ", "Bob", "Smith", "789|Main St|Melbourne|Victoria|Australia", "01-01-2000");
-        boolean result = adult.updatePersonalDetails("1#XYZ", "Robert", "Smith", "789|Main St|Melbourne|Victoria|Australia", "01-01-1999");
+        Person adult = new Person(
+            "1#XYZ", 
+            "Bob", 
+            "Smith", 
+            "789|Main St|Melbourne|Victoria|Australia", 
+            "01-01-2000"
+            );
+        boolean result = adult.updatePersonalDetails(
+            "1#XYZ", "Robert", 
+            "Smith", 
+            "789|Main St|Melbourne|Victoria|Australia", 
+            "01-01-1999"
+            );
         assertFalse(result);
     }
 
     // Test Case 4: Birthday and address change — not allowed
     @Test
     public void updatePersonalDetails_testCase4() {
-        Person adult = new Person("1#XYZ", "Bob", "Smith", "789|Main St|Melbourne|Victoria|Australia", "01-01-2000");
-        boolean result = adult.updatePersonalDetails("1#XYZ", "Bob", "Smith", "456|Old St|Melbourne|Victoria|Australia", "01-01-1999");
+        Person adult = new Person(
+            "1#XYZ", 
+            "Bob", 
+            "Smith", 
+            "789|Main St|Melbourne|Victoria|Australia", 
+            "01-01-2000"
+            );
+        boolean result = adult.updatePersonalDetails(
+            "1#XYZ", 
+            "Bob", 
+            "Smith", 
+            "456|Old St|Melbourne|Victoria|Australia", 
+            "01-01-1999"
+            );
         assertFalse(result);
     }
 
     // Test Case 5: All changes valid if adult is with odd-digit ID
     @Test
     public void updatePersonalDetails_testCase5() {
-        Person adult = new Person("3@XYZ", "Jane", "Doe", "321|Square St|Richmond|Victoria|Australia", "15-03-1995");
-        boolean result = adult.updatePersonalDetails("3*A#C", "Janet", "Dane", "654|New Rd|Richmond|Victoria|Australia", "15-03-1995");
-        assertTrue(result);
+        Person adult = new Person(
+            "3@XYZ", 
+            "Jane", 
+            "Doe", 
+            "321|Square St|Richmond|Victoria|Australia", 
+            "15-03-1995"
+            );
+        boolean result = adult.updatePersonalDetails(
+            "3*A#C", 
+            "Janet", 
+            "Dane", 
+            "654|New Rd|Richmond|Victoria|Australia", 
+            "15-03-1995"
+            );
+        assertFalse(result);
     }
 
 }

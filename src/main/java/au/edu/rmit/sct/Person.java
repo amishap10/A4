@@ -105,8 +105,7 @@ public class Person {
         //Condition 2: If a person's birthday is going to be changed, then no other personal detail (i.e, person's ID, firstName, LastName, address) can be changed.
         boolean birthdayChanged = !this.birthdate.equals(newBirthdate);
         if (birthdayChanged) {
-            if (!this.personID.equals(newID) || !this.firstName.equals(newFirstName) || 
-                !this.lastName.equals(newLastName) || !this.address.equals(newAddress)) {
+            if (!this.personID.equals(newID) || !this.firstName.equals(newFirstName) || !this.lastName.equals(newLastName) || !this.address.equals(newAddress)) {
                 return false;
             }
         }

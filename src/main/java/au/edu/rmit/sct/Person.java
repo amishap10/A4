@@ -41,7 +41,7 @@ public class Person {
 
         // Condition 1 
         // Checks if personID's length is exactly 10 characters long
-        if (personID.length() == 10) {
+        if (personID.length() != 10) {
             return false;
         }
         char firstChar = personID.charAt(0);

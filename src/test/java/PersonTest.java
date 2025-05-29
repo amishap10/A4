@@ -12,7 +12,7 @@ public class PersonTest {
     @Test
     void validPerson() {
         Person person = new Person(
-            "36!@&*XYP",
+            "36!@&s*XYP",
             "Emily",
             "Smith",
             "124|La Trobe Street|Melbourne|Victoria|Australia",

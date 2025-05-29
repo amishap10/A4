@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="PersonDemeritPointsTest" time="0.022" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="PersonDemeritPointsTest" time="0.023" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AU"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/amishapradhan/Desktop/A4/target/surefire/surefirebooter-20250529223141722_3.jar /Users/amishapradhan/Desktop/A4/target/surefire 2025-05-29T22-31-41_684-jvmRun1 surefire-20250529223141722_1tmp surefire_0-20250529223141722_2tmp"/>
+    <property name="sun.java.command" value="/Users/amishapradhan/Desktop/A4/target/surefire/surefirebooter-20250529224335575_3.jar /Users/amishapradhan/Desktop/A4/target/surefire 2025-05-29T22-43-35_537-jvmRun1 surefire-20250529224335575_1tmp surefire_0-20250529224335575_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/amishapradhan/Desktop/A4/target/test-classes:/Users/amishapradhan/Desktop/A4/target/classes:/Users/amishapradhan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/Users/amishapradhan/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/amishapradhan/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/Users/amishapradhan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/amishapradhan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/Users/amishapradhan/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/amishapradhan/Desktop/A4/target/surefire/surefirebooter-20250529223141722_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/amishapradhan/Desktop/A4/target/surefire/surefirebooter-20250529224335575_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="23.0.2"/>
@@ -61,7 +61,7 @@
   </properties>
   <testcase name="testCase5_under21_suspendAfterThreshold" classname="PersonDemeritPointsTest" time="0.017"/>
   <testcase name="testCase3_invalidDateFormat" classname="PersonDemeritPointsTest" time="0.0"/>
-  <testcase name="testCase1_under21_validNoSuspend" classname="PersonDemeritPointsTest" time="0.001"/>
-  <testcase name="testCase4_pointsOutOfRange" classname="PersonDemeritPointsTest" time="0.001"/>
-  <testcase name="testCase2_over21_flowNoSuspendThenSuspend" classname="PersonDemeritPointsTest" time="0.0"/>
+  <testcase name="testCase1_under21_validNoSuspend" classname="PersonDemeritPointsTest" time="0.0"/>
+  <testcase name="testCase4_pointsOutOfRange" classname="PersonDemeritPointsTest" time="0.002"/>
+  <testcase name="testCase2_over21_flowNoSuspendThenSuspend" classname="PersonDemeritPointsTest" time="0.001"/>
 </testsuite>

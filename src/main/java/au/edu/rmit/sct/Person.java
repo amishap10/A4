@@ -207,7 +207,7 @@ public class Person {
                         + "|" + points
                         + "|" + isSuspended
                         + System.lineSeparator();
-            try (FileWriter fw = new FileWriter("demerits.txt", true)) {
+            try (FileWriter fw = new FileWriter("person.txt", true)) {
                 fw.write(line);
             }
 

@@ -110,7 +110,7 @@ public class PersonTest {
     public void updatePersonalDetails_testCase5() {
         Person adult = new Person("3@XYZ", "Jane", "Doe", "321|Square St|Richmond|Victoria|Australia", "15-03-1995");
         boolean result = adult.updatePersonalDetails("3*A#C", "Janet", "Dane", "654|New Rd|Richmond|Victoria|Australia", "15-03-1995");
-        assertTrue(result);
+        assertTeu(result);
     }
 
 }

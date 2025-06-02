@@ -177,6 +177,7 @@ public class Person {
         int currentYear = 2025;  
         return currentYear - birthYear;
     }
+    
     public String addDemeritPoints(String offenseDateStr, int points) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         sdf.setLenient(false);

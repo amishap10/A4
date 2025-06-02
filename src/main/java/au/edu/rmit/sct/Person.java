@@ -113,6 +113,8 @@ public class Person {
     }
 
     public boolean updatePersonalDetails(String newID, String newFirstName, String newLastName, String newAddress, String newBirthdate) {
+        
+        // calculates the current age of the person using their current birthdate
         int age = calculateAge(this.birthdate);
         
         //Condition 1: If a person is under 18, their address cannot be changed.
@@ -134,15 +136,18 @@ public class Person {
                 return false;
             }
         }
-        //Reads file and update matching line
+        //Reads person.txt file and update matching line
         StringBuilder updatedContent = new StringBuilder();
         boolean found = false;
 
         try (Scanner scanner = new Scanner(new File("person.txt"))) {
+            //reads file line by line
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] parts = line.split(",", -1);
+                //matches the line using the original person ID
                 if (parts.length == 5 && parts[0].equals(this.personID)) {
+                    //build updated line with the new details
                     String updatedLine = newID + "," + newFirstName + "," + newLastName + "," + newAddress + "," + newBirthdate;
                     updatedContent.append(updatedLine).append("\n");
                     found = true;
@@ -151,16 +156,17 @@ public class Person {
                 }
             }
         } catch (IOException e) {
+            //if txt file reading fails, it returns false
             return false;
         }
         if (!found) return false;
-        //Overwrites file
+        //Overwrites person.txt file with updated details
         try (FileWriter writer = new FileWriter("person.txt", false)) {
             writer.write(updatedContent.toString());
         } catch (IOException e) {
             return false;
         }
-        //Updates current object
+        //successful changes in file updates objects with new values 
         this.personID = newID;
         this.firstName = newFirstName;
         this.lastName = newLastName;
@@ -168,10 +174,10 @@ public class Person {
         this.birthdate = newBirthdate;
         return true;
     }
-
+    // Calculates age from the birthdate assuming format is in "DD-MM-YYYY"
     private int calculateAge(String birthdate) {
         int birthYear = 0;
-        for (int i = 0; i < 4; i++) {
+        for (int i = 6; i < 10; i++) {
             birthYear = birthYear * 10 + (birthdate.charAt(i) - '0');
         }
         int currentYear = 2025;  

@@ -77,14 +77,15 @@ public class PersonTest {
     @Test
     public void updatePersonalDetails_testCase1() {
         Person child = new Person(
-            "1@ABC", 
+            "56s_d%&fAA", 
             "Alice", 
             "Young", 
             "123|Circle St|Carlton|Victoria|Australia", 
             "10-05-2010"
             );
+        assertTrue(child.addPerson());
         boolean result = child.updatePersonalDetails(
-            "1@ABC", 
+            "56s_d%&fAA", 
             "Alice", 
             "Young", 
             "456|Tree Ave|Carlton|Victoria|Australia", 
@@ -98,14 +99,15 @@ public class PersonTest {
     @Test
     public void updatePersonalDetails_testCase2() {
         Person adult = new Person(
-            "1#XYZ", 
+            "56s_d%&fAB", 
             "Bob", 
             "Smith", 
             "456|Main St|Melbourne|Victoria|Australia", 
             "01-01-2000"
             );
+        assertTrue(adult.addPerson());
         boolean result = adult.updatePersonalDetails(
-            "1#XYZ", 
+            "56s_d%&fAB", 
             "Bob", 
             "Smith", 
             "789|Main St|Melbourne|Victoria|Australia", 
@@ -118,14 +120,16 @@ public class PersonTest {
     @Test
     public void updatePersonalDetails_testCase3() {
         Person adult = new Person(
-            "1#XYZ", 
+            "56s_d%&fAC", 
             "Bob", 
             "Smith", 
             "789|Main St|Melbourne|Victoria|Australia", 
             "01-01-2000"
             );
+        assertTrue(adult.addPerson());
         boolean result = adult.updatePersonalDetails(
-            "1#XYZ", "Robert", 
+            "56s_d%&fAC", 
+            "Robert", 
             "Smith", 
             "789|Main St|Melbourne|Victoria|Australia", 
             "01-01-1999"
@@ -137,14 +141,15 @@ public class PersonTest {
     @Test
     public void updatePersonalDetails_testCase4() {
         Person adult = new Person(
-            "1#XYZ", 
+            "56s_d%&fAD", 
             "Bob", 
             "Smith", 
             "789|Main St|Melbourne|Victoria|Australia", 
             "01-01-2000"
             );
+        assertTrue(adult.addPerson());
         boolean result = adult.updatePersonalDetails(
-            "1#XYZ", 
+            "56s_d%&fAD", 
             "Bob", 
             "Smith", 
             "456|Old St|Melbourne|Victoria|Australia", 
@@ -157,14 +162,15 @@ public class PersonTest {
     @Test
     public void updatePersonalDetails_testCase5() {
         Person adult = new Person(
-            "36!@&*XYP", 
+            "56s_d%&fAE", 
             "Jane", 
             "Doe", 
             "321|Square St|Richmond|Victoria|Australia", 
             "15-03-1995"
             );
+        assertTrue(adult.addPerson());
         boolean result = adult.updatePersonalDetails(
-            "36!@&*XYP", 
+            "56s_d%&fAE", 
             "Janet", 
             "Dane", 
             "654|New Rd|Richmond|Victoria|Australia", 

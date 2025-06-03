@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="PersonDemeritPointsTest" time="0.027" tests="5" errors="0" skipped="0" failures="0">
+=======
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="PersonDemeritPointsTest" time="0.025" tests="5" errors="0" skipped="0" failures="0">
+>>>>>>> b2759e7c6a62bcf72f3f550a49175cd240805f6c
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +17,11 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AU"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+<<<<<<< HEAD
     <property name="sun.java.command" value="/Users/jannabegum/Documents/software_fundamental/A4-2/target/surefire/surefirebooter-20250603160435131_3.jar /Users/jannabegum/Documents/software_fundamental/A4-2/target/surefire 2025-06-03T16-04-35_088-jvmRun1 surefire-20250603160435131_1tmp surefire_0-20250603160435131_2tmp"/>
+=======
+    <property name="sun.java.command" value="/Users/jannabegum/Documents/software_fundamental/A4-2/target/surefire/surefirebooter-20250603155606416_3.jar /Users/jannabegum/Documents/software_fundamental/A4-2/target/surefire 2025-06-03T15-56-06_371-jvmRun1 surefire-20250603155606416_1tmp surefire_0-20250603155606416_2tmp"/>
+>>>>>>> b2759e7c6a62bcf72f3f550a49175cd240805f6c
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/jannabegum/Documents/software_fundamental/A4-2/target/test-classes:/Users/jannabegum/Documents/software_fundamental/A4-2/target/classes:/Users/jannabegum/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/Users/jannabegum/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/jannabegum/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/Users/jannabegum/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/jannabegum/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/Users/jannabegum/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:"/>
@@ -30,7 +38,11 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
+<<<<<<< HEAD
     <property name="surefire.real.class.path" value="/Users/jannabegum/Documents/software_fundamental/A4-2/target/surefire/surefirebooter-20250603160435131_3.jar"/>
+=======
+    <property name="surefire.real.class.path" value="/Users/jannabegum/Documents/software_fundamental/A4-2/target/surefire/surefirebooter-20250603155606416_3.jar"/>
+>>>>>>> b2759e7c6a62bcf72f3f550a49175cd240805f6c
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="23.0.2"/>
@@ -60,8 +72,15 @@
     <property name="java.class.version" value="67.0"/>
   </properties>
   <testcase name="testCase5_under21_suspendAfterThreshold" classname="PersonDemeritPointsTest" time="0.02"/>
+<<<<<<< HEAD
   <testcase name="testCase3_invalidDateFormat" classname="PersonDemeritPointsTest" time="0.0"/>
   <testcase name="testCase1_under21_validNoSuspend" classname="PersonDemeritPointsTest" time="0.0"/>
   <testcase name="testCase4_pointsOutOfRange" classname="PersonDemeritPointsTest" time="0.002"/>
   <testcase name="testCase2_over21_flowNoSuspendThenSuspend" classname="PersonDemeritPointsTest" time="0.001"/>
+=======
+  <testcase name="testCase3_invalidDateFormat" classname="PersonDemeritPointsTest" time="0.001"/>
+  <testcase name="testCase1_under21_validNoSuspend" classname="PersonDemeritPointsTest" time="0.001"/>
+  <testcase name="testCase4_pointsOutOfRange" classname="PersonDemeritPointsTest" time="0.001"/>
+  <testcase name="testCase2_over21_flowNoSuspendThenSuspend" classname="PersonDemeritPointsTest" time="0.002"/>
+>>>>>>> b2759e7c6a62bcf72f3f550a49175cd240805f6c
 </testsuite>
